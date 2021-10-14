@@ -1,0 +1,5 @@
+Buat tabel dgn nama mahasiswa didalam database akademikkk : use akademikkk; create table mahasiswa’ ( ‘nim’ varchar(5), ‘nama’ varchar(50), ‘jkel’ varchar(1), ‘alamat’ text, ‘tgllhr’ date, primary key (’nim’)); 
+
+INSERT INTO mahasiswa VALUES("MHS01','Siti Aminah','p','SOLO','1995-10-01');
+INSERT INTO mahasiswa VALUES("MHS02','Rita','p','SOLO','1995-10-01');
+INSERT INTO mahasiswa VALUES("MHS03','Amiruddin','L','Semarang','1998-08-11');
