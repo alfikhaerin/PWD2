@@ -1,0 +1,45 @@
+*/CARA MEMBUAT DATABASE BARU/*
+CREATE DATABASE AKDEMIKKK;
+
+*/CARA MEMBUAT TABEL BARU/*
+USE AKDEMIKK;
+CREATE TABLE 'MAHASISWA'
+(
+'NIM'varchar(5),
+'Nama'varchar(50),
+'jkel'Varchar(1),
+'alamat'text,
+'tgllhr'date,
+primary key('NIM')
+
+);
+
+*/CARA MENAMBHAKAN DATA BANNYAK/*
+
+INSERT INTO `mahasiswa` (`NIM`, `Nama`, `jkel`, `alamat`, `tgllahr`) VALUES ('MHS01', 'Siti Aminah', 'P', 'Solo', '1995-10-01'), ('MHS02', 'Rita', 'P', 'SOlo', '1995-01-01'), ('MHS03', 'Amiruddin', 'L', 'SEMARANG', '1998-08-11'), ('MHS04', 'Siti Maryam', 'P', 'JAKARTA', '1995-04-15');
+
+
+*/CARA MANAMBAHKAN FIELD DI DALAM TABEL MAHASISWA/*
+ALTER TABLE mahasiswa ADD semester int (2);
+
+
+/*Menambahkan data baru difield yang kosong/*
+UPDATE `mahasiswa` SET `semester` = '5' WHERE `mahasiswa`.`NIM` = 'MHS01';
+UPDATE `mahasiswa` SET `semester` = '5' WHERE `mahasiswa`.`NIM` = 'MHS02';
+UPDATE `mahasiswa` SET `semester` = '5' WHERE `mahasiswa`.`NIM` = 'MHS03';
+UPDATE `mahasiswa` SET `semester` = '5' WHERE `mahasiswa`.`NIM` = 'MHS04';
+
+/*Menampilkan TABEL MAHASISWA YANG BERJENIS KELAMIN PEREMPUAN/*
+SELECT * from mahasiswa WHERE jkel='P';
+
+/*MENAMPILKAN NAMA DAN NIM MAHASISWA/*
+SELECT NIM,Nama from mahasiswa;
+
+/*menampilkan 2 data mahasiswa pertama/*
+SELECT * FROM mahasiswa limit 2;
+
+/*Menampilkan nama mahasiswa dari /*
+select Nama from mahasiswa;
+
+/*Menampilkan nama mahasiswa sesuai dengan urur abjact/*
+select * from mahasiswa order by Nama ASC;
